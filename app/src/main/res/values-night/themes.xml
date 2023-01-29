@@ -1,0 +1,65 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.ToDoAPP" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/baby_purple</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/black</item>
+
+        <item name="colorOutline">@color/light_grey</item>
+        <item name="boxStrokeColor">@color/purple_500</item>
+
+
+        <!-- BOTTOM NAVIGATION. -->
+        <item name="android:navigationBarColor">@color/light_grey</item>
+
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/baby_purple</item>
+        <item name="colorSecondaryVariant">@color/baby_purple</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/dark_grey</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+
+
+    <style name="Splash_Screen_THEME" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/baby_purple</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/black</item>
+
+
+        <!-- App bar TOP. -->
+        <item name="android:navigationBarColor">@color/dark_grey</item>
+
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/baby_purple</item>
+        <item name="colorSecondaryVariant">@color/teal_200</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/dark_grey</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+
+    <style name="Confirm_Mail_THEME" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_200</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/black</item>
+
+
+        <!-- App bar TOP. -->
+        <item name="android:navigationBarColor">@color/dark_grey</item>
+
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/baby_purple</item>
+        <item name="colorSecondaryVariant">@color/teal_200</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/dark_grey</item>
+        <!-- Customize your theme here. -->
+    </style>
+</resources>

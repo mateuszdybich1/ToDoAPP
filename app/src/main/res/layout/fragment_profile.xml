@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+
+             android:background="@color/dark_grey"
+             android:paddingTop="40dp"
+             android:paddingLeft="20dp"
+             android:paddingRight="20dp"
+             android:paddingBottom="40dp"
+             tools:context=".ProfileFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
+                                                       android:layout_height="match_parent">
+
+        <Button
+                style="@style/Widget.Material3.Button"
+
+                android:backgroundTint="@color/baby_purple"
+                android:textColor="@color/dark_grey"
+                android:text="Logout"
+                android:layout_width="200dp"
+                android:textSize="24sp"
+                android:layout_height="60dp" android:id="@+id/profile_logout_BTN"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0"/>
+        <LinearLayout
+                android:layout_marginBottom="40dp"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@+id/profile_logout_BTN" android:id="@+id/linearLayout5"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout8"
+                app:layout_constraintVertical_bias="0.13999999">
+            <Button
+                    android:paddingLeft="45dp"
+                    android:paddingRight="45dp"
+
+                    android:autoSizeTextType="uniform"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="15dp"
+                    android:layout_weight="0.5"
+                    android:textSize="24sp"
+
+
+                    android:autoSizeMaxTextSize="24sp"
+                    style="@style/Widget.Material3.Button"
+                    android:text="Team list"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp" android:id="@+id/profile_employee_BTN"/>
+
+            <Button
+                    android:layout_gravity="center"
+                    android:paddingRight="30dp"
+                    android:paddingLeft="30dp"
+                    android:layout_marginLeft="15dp"
+                    android:autoSizeMaxTextSize="24sp"
+                    android:layout_weight="0.5"
+                    android:textSize="24sp"
+                    android:autoSizeTextType="uniform"
+                    style="@style/Widget.Material3.Button"
+                    android:text="Undone tasks"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp" android:id="@+id/profile_undone_BTN"/>
+        </LinearLayout>
+        <LinearLayout
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="8dp" android:id="@+id/linearLayout6">
+            <TextView
+                    android:layout_weight="0.6"
+                    android:layout_marginRight="20dp"
+                    android:textColor="@color/baby_purple"
+                    android:textSize="20sp"
+                    android:text="Nickname:"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/textView14"
+                    app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5" app:layout_constraintEnd_toStartOf="@+id/profile_nick_TV"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintVertical_chainStyle="packed"/>
+
+            <TextView
+                    android:autoSizeTextType="uniform"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.4"
+                    android:textColor="@color/lightest_grey"
+                    android:textSize="20sp"
+                    android:text="My nick"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" android:id="@+id/profile_nick_TV"
+                    app:layout_constraintStart_toEndOf="@+id/textView14" app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintTop_toTopOf="parent"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout6" android:id="@+id/linearLayout7"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="20dp" android:layout_marginEnd="20dp">
+            <TextView
+                    android:layout_weight="0.6"
+                    android:textColor="@color/baby_purple"
+                    android:textSize="20sp"
+                    android:text="Email:"
+
+
+                    android:layout_marginRight="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView15"
+                    app:layout_constraintStart_toStartOf="@+id/textView14"
+                    app:layout_constraintTop_toBottomOf="@+id/textView14"/>
+            <TextView
+                    android:autoSizeTextType="uniform"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center_vertical"
+                    android:text="My email"
+                    android:layout_weight="0.4"
+                    android:textColor="@color/lightest_grey"
+                    android:textSize="20sp"
+
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" android:id="@+id/profile_email_TV"
+                    app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toBottomOf="@+id/profile_nick_TV"
+                    app:layout_constraintStart_toEndOf="@+id/textView15"/>
+        </LinearLayout>
+        <LinearLayout
+                android:layout_margin="20dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout7" android:id="@+id/linearLayout8"
+                tools:layout_editor_absoluteX="20dp">
+            <TextView
+
+                    android:layout_weight="0.6"
+                    android:textColor="@color/baby_purple"
+                    android:textSize="20sp"
+                    android:text="Leader:"
+                    android:layout_width="match_parent"
+                    android:layout_marginRight="20dp"
+                    android:layout_height="wrap_content" android:id="@+id/textView17"
+                    tools:layout_editor_absoluteY="294dp" tools:layout_editor_absoluteX="181dp"/>
+            <TextView
+                    android:autoSizeTextType="uniform"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.4"
+                    android:textColor="@color/lightest_grey"
+                    android:textSize="20sp"
+                    android:text="You"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" android:id="@+id/profile_manager_TV"
+                    tools:layout_editor_absoluteY="235dp" tools:layout_editor_absoluteX="130dp"/>
+
+        </LinearLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

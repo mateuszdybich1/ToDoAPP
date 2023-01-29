@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        android:orientation="vertical"
+        android:background="@color/light_grey"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+
+        android:paddingTop="40dp"
+        android:paddingBottom="80dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.textfield.TextInputLayout
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            app:boxCornerRadiusTopEnd="30dp"
+            app:boxCornerRadiusBottomEnd="30dp"
+            app:boxCornerRadiusTopStart="30dp"
+            app:boxCornerRadiusBottomStart="30dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_marginTop="5dp"
+            android:hint="Enter email"
+            app:boxStrokeColor="@color/activation_color"
+            android:textColorHint="@color/lightest_grey"
+            android:id="@+id/add_worker_ETL"
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
+
+    <com.google.android.material.textfield.TextInputEditText
+            android:textColor="@color/lightest_grey"
+            android:inputType="textEmailAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/add_worker_ET"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <Button
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            style="@style/Widget.Material3.Button"
+            android:textSize="18dp"
+            android:textColor="@color/dark_grey"
+            app:rippleColor="@color/baby_purple"
+            android:text="Add to project"
+            android:layout_width="match_parent"
+            android:layout_height="60dp" android:id="@+id/add_worker_BTN"/>
+
+
+</LinearLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+
+              android:layout_marginTop="15dp"
+              android:layout_height="wrap_content">
+
+    <com.google.android.material.card.MaterialCardView
+
+
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:checkable="true"
+            app:cardCornerRadius="20dp"
+
+            app:cardBackgroundColor="@color/light_grey"
+            app:cardElevation="20dp"
+            android:layout_width="match_parent" android:layout_height="120dp"
+
+            android:id="@+id/my_task_Card">
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_margin="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+            <TextView
+
+                    android:layout_marginRight="20dp"
+                    android:autoSizeTextType="uniform"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/baby_purple"
+                    android:text="Text view"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp" android:id="@+id/name"
+                    app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/tdl_sd_TV"/>
+            <TextView
+                    android:layout_marginRight="20dp"
+                    android:autoSizeTextType="uniform"
+                    android:textSize="16sp"
+                    android:textColor="@color/lightest_grey"
+                    android:text="Basic meeting, need confiramtion"
+                    android:layout_width="0dp"
+                    android:layout_height="28dp" android:id="@+id/short_Descr"
+                    app:layout_constraintStart_toStartOf="@+id/name" app:layout_constraintTop_toBottomOf="@+id/name"
+                    android:layout_marginTop="8dp" app:layout_constraintEnd_toStartOf="@+id/deadline"/>
+            <TextView
+                    android:layout_marginRight="5dp"
+                    android:textColor="@color/baby_purple"
+                    android:text="Deadline:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
+                    android:id="@+id/tdl_sd_TV" app:layout_constraintBottom_toTopOf="@+id/deadline"
+                    app:layout_constraintVertical_chainStyle="packed" android:textSize="16sp"/>
+            <TextView
+                    android:text="2023-05-15 23:45"
+                    android:layout_width="80dp"
+                    android:textAlignment="textEnd"
+                    android:layout_height="40dp" android:id="@+id/deadline"
+                    app:layout_constraintEnd_toEndOf="@+id/tdl_sd_TV"
+                    app:layout_constraintTop_toBottomOf="@+id/tdl_sd_TV" android:textColor="@color/lightest_grey"
+                    android:layout_marginTop="8dp" app:layout_constraintBottom_toBottomOf="parent"
+            />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+</LinearLayout>

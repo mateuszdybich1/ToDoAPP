@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/navigation_container"
+            app:startDestination="@id/toDoFragment">
+
+    <fragment android:id="@+id/toDoFragment" android:name="com.dybich.todoapp.ToDoFragment"
+              android:label="fragment_to_do" tools:layout="@layout/fragment_to_do"/>
+    <fragment android:id="@+id/doingFragment" android:name="com.dybich.todoapp.DoingFragment"
+              android:label="fragment_doing" tools:layout="@layout/fragment_doing"/>
+    <fragment android:id="@+id/doneFragment" android:name="com.dybich.todoapp.DoneFragment"
+              android:label="fragment_done" tools:layout="@layout/fragment_done"/>
+    <fragment android:id="@+id/profileFragment" android:name="com.dybich.todoapp.ProfileFragment"
+              android:label="fragment_profile" tools:layout="@layout/fragment_profile"/>
+</navigation>

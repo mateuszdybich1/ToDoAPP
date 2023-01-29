@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:id="@+id/list"
+              android:background="@color/light_grey"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:clipToPadding="false"
+              android:paddingBottom="80dp"
+
+              android:paddingTop="40dp">
+
+
+    <Button
+
+            style="@style/Widget.Material3.Button"
+            android:textSize="20sp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            app:rippleColor="@color/baby_purple"
+            android:textColor="@color/dark_grey"
+            android:text="Finish"
+            android:layout_width="match_parent"
+            android:layout_height="60dp" android:id="@+id/buttonFinish"/>
+
+    <Button
+
+            style="@style/Widget.Material3.Button"
+            android:textSize="20sp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            app:rippleColor="@color/baby_purple"
+            android:textColor="@color/dark_grey"
+            android:text="Delete"
+            android:layout_width="match_parent"
+            android:layout_height="60dp" android:id="@+id/DoingButtonDelete"/>
+</LinearLayout>

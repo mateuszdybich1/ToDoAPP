@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@color/dark_grey"
+             tools:context=".ToDoFragment">
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+
+                android:paddingTop="20dp"
+
+
+                tools:listitem="@layout/card_cell"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" android:id="@+id/ToDo_RV" tools:layout_editor_absoluteY="20dp"/>
+
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+
+                android:layout_marginRight="20dp"
+                android:id="@+id/expand_options_BTN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:src="@drawable/add"
+                app:layout_constraintBottom_toBottomOf="parent"
+                tools:ignore="SpeakableTextPresentCheck"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="1.0"
+                android:layout_marginBottom="16dp"/>
+
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:id="@+id/add_task_BTN"
+                android:layout_width="wrap_content"
+                android:backgroundTint="@color/lightest_grey"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:text="Add task"
+                app:icon="@drawable/todologo"
+                app:layout_constraintEnd_toEndOf="@+id/expand_options_BTN"
+                app:layout_constraintStart_toStartOf="@+id/expand_options_BTN"
+                app:layout_constraintBottom_toTopOf="@+id/expand_options_BTN"
+                app:layout_constraintHorizontal_bias="1.0" android:layout_marginBottom="8dp"/>
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:id="@+id/add_person_BTN"
+                android:backgroundTint="@color/lightest_grey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+
+                android:text="Add partner"
+                app:icon="@drawable/add_person"
+                app:layout_constraintEnd_toEndOf="@+id/add_task_BTN"
+                app:layout_constraintBottom_toTopOf="@+id/add_task_BTN" android:layout_marginBottom="8dp"/>
+        <TextView
+                android:padding="30dp"
+
+                android:textAlignment="center"
+                android:textStyle="bold|italic"
+                android:visibility="gone"
+                android:textSize="30sp"
+                android:textColor="@color/baby_purple"
+                android:text="TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/ftd_TV"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="@+id/ToDo_RV"
+                app:layout_constraintBottom_toBottomOf="@+id/ToDo_RV" app:layout_constraintTop_toTopOf="@+id/ToDo_RV"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
