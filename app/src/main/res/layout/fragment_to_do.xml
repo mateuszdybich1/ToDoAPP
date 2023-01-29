@@ -58,7 +58,7 @@
                 android:layout_height="wrap_content"
                 android:visibility="gone"
 
-                android:text="Add partner"
+                android:text="Add employee"
                 app:icon="@drawable/add_person"
                 app:layout_constraintEnd_toEndOf="@+id/add_task_BTN"
                 app:layout_constraintBottom_toTopOf="@+id/add_task_BTN" android:layout_marginBottom="8dp"/>

@@ -32,7 +32,7 @@
             android:textColor="@color/baby_purple"
             android:textSize="26sp"
             android:textStyle="bold"
-            android:text="Project partners:"
+            android:text="Project employees:"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/textView19"
             app:layout_constraintTop_toBottomOf="@+id/employee_list_manager_TV"
