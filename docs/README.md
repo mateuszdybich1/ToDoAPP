@@ -9,20 +9,7 @@
 
 
 
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
+
 
 
 
@@ -33,10 +20,10 @@
     <img src="img/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">ToDoAPP</h3>
+<h3 align="center">ToDo APP</h3>
 
   <p align="center">
-    An awesome README template to jumpstart your projects!
+    Simple app for groups to organize tasks in project.
     <br />
     <a href="https://github.com/mateuszdybich1/ToDoAPP"><strong>Explore the docs »</strong></a>
     <br />
@@ -82,18 +69,137 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+This project is created for small groups where there is a team leader (manager) and other employees to help them create, manage and  organize tasks. Only team leader can add employee to project, remove employee from project, add tasks and delete them. Regular employee can only start and finish tasks. 
 
-There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should implement DRY principles to the rest of your life :smile:
+How to use this app:
+* After a few seconds of splash screen, user will be taken to the login view. Next, he has to click on the purple text "Sign up now", and will be redirected to the registration view.
+<style>
+.grid-container {
+  display: grid;
+    
+  grid-template-columns: auto auto;
+   align-content: center;
+    padding-bottom: 20px;
+    alignment: center;
+    grid-gap: 40px;
+    justify-content: center;
+}
+.grid-container2 {
+  display: grid;
+    
+  grid-template-columns: auto;
+    place-items: center;
 
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
+    padding-bottom: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    grid-gap: 40px;
+    
+    
+    
+}
 
-Use the `BLANK_README.md` to get started.
+</style>
+<div class="grid-container">
+    
+  <img src="img/imgSplashScreen.png" height="400" alt="Splash Screen">
+  <img src="img/imgLogin.png" height="400" alt="Login Activity">
+
+  
+</div>
+
+
+* User must provide all data, i.e. username, email, password and its repetition. Then decide whether he is the project leader, and click switch button. If all data is unique, then he will be transferred to the view with a 4-digit pin code that
+  came to the e-mail address. After entering the code correctly, user will be redirected to
+  main view with tasks.
+<div class="grid-container">
+  <img src="img/imgRegister.png" height="400" alt="Register Activity">
+  <img src="img/imgConfirmMail.png" height="400" alt="Confirm Mail Activity">
+<img src="img/imgConfirmMail_code.png" height="400" alt="Email code">
+<img src="img/imgToDo.png" height="400" alt="ToDo Fragment">
+</div>
+
+* After logging in, the user sees 4 sections: "ToDo", "Doing", "Done",
+and "Profile". In the "ToDo", "Doing", and "Done" sections, the user sees
+task tiles, and can click on a particular task to
+view its details, and hold to perform the operation.
+<div class="grid-container">
+  <img src="img/imgTaskInfo.png" height="400" alt="Add To Project bottom sheet">
+</div>
+
+- "ToDo" - If the user is a leader, he sees a button
+  which, when pressed, sees a list with 2 buttons ("Add employee" and "Add task"):
+<div class="grid-container"><img src="img/imgToDo_btnClicked.png" height="400" alt="ToDo Fragment button clicked"></div>
+
+"Add employee" - when leader clicks on this button, he can add employee to project by entering email of employee and clicking button "Add to project".
+<div class="grid-container">
+  <img src="img/imgAddToProject.png" height="400" alt="Add To Project bottom sheet">
+</div>
+
+
+"Add task" - when clicked, user is redirected to the view with fields to fill to add new task for the project. Base deadline date is set to the end of next day.
+<div class="grid-container">
+  <img src="img/imgAddTask.png" height="400" alt="Add Task activity">
+
+</div>
+
+<div class="grid-container">
+<img src="img/imgAddTask_deadlineDate.png" height="400" alt="Deadline Date Fragment">
+<img  src="img/imgAddTask_deadlineHour.png" height="400" alt="Deadline Hour Fragment">
+</div>
+
+In this section user can start task by holding on task tile and then clicking "Start doing" button. Nickname of user who started task will be assigned to the "Started by" field in task description. Task will be moved to "Doing" section. If user is a manager, he can also delete task by clicking "Delete" button. Regular employee doesn't see this button.
+
+<div class="grid-container">
+  <img src="img/imgToDo_bottomSheet.png" height="400" alt="ToDo bottom sheet">
+
+</div>
+
+* "Doing" - In this section user can see a list of tasks that are in progress. To finish task, user has to hold on task tile and then click "Finish" button. Task will be moved to "Done" section. Nickname of user who finished task will be assigned to the "Finished by" field in task description. If user is a manager, he can also delete task by clicking "Delete" button. Regular employee doesn't see this button.
+<div class="grid-container">
+
+  <img src="img/imgDoing.png" height="400" alt="Doing Fragment">
+    <img src="img/imgDoing_bottomSheet.png" height="400" alt="Doing bottom sheet">
+</div>
+
+- "Done" - In this section you can see a list of all tasks that have been completed
+  have been completed. If user is a manager, he can also delete task by clicking "Delete" button after holding on task tile. Regular employee doesn't see this button.
+<div class="grid-container">
+
+  <img src="img/imgDone.png" height="400" alt="Done Framgent">
+    <img src="img/imgDone_bottomSheet.png" height="400" alt="Done bottom sheet">
+</div>
+
+- "Profile" - User can view information about the account: nickname
+  username, email address and leader's nickname. Team members list is available after clicking on "Team list" button. In case of,
+  when the user is a leader, he has option to remove
+  any employee from the team with the "Remove" button. The second button is
+  “Undone Tasks” which does nothing right now, because it isn't finished yet. When the deadline of the task from section "ToDo" or "Doing" have exceeded, task will be moved to the section available after clicking on this button. List will contain tasks which weren't started or finished before the deadline of the task. 
+<div class="grid-container">
+    <img src="img/imgProfile.png" height="400" alt="Profile Fragment">
+    <img src="img/imgEmployeeList.png" height="400" alt="Employee List Activity">
+</div>
+
+Database structure:
+
+<div class="grid-container2">
+    <img src="img/auth.png" alt="auth img1">
+    <img src="img/auth2.png"  alt="auth img2">
+    <img  src="img/db1.png"  alt="db img1">
+<img  src="img/db2.png"  alt="db img2">
+<img  src="img/db3.png"  alt="db img3">
+<img  src="img/db4.png"  alt="db img4">
+<img  src="img/db5.png"  alt="db img5">
+<img  src="img/db6.png"  alt="db img6">
+<img  src="img/db7.png"  alt="db img7">
+</div>
+
+PHP SMTP API:
+<div class="grid-container2">
+    <img src="img/php.png" alt="php API">
+</div>
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -101,136 +207,23 @@ Use the `BLANK_README.md` to get started.
 
 ### Built With
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
-* [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
-* [![Vue][Vue.js]][Vue-url]
-* [![Angular][Angular.io]][Angular-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
+* [![Next][IntelliJ]][IntelliJ-url]
+* [![Next][Kotlin]][Kotlin-url]
+* [![Next][PHP]][PHP-url]
+* [![Next][Firebase]][Firebase-url]
+* [![Next][Material]][Material-url]
+* [![Next][Volley]][Volley-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- GETTING STARTED -->
-## Getting Started
-
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
-
-### Installation
-
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
-
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/your_username_/Project-Name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- ROADMAP -->
-## Roadmap
-
-- [x] Add Changelog
-- [x] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
-- [ ] Multi-language Support
-    - [ ] Chinese
-    - [ ] Spanish
-
-See the [open issues](https://github.com/mateuszdybich1/ToDoAPP/issues) for a full list of proposed features (and known issues).
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+Mateusz Dybich  - mateuszdybich1@gmail.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
-
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
-* [Malven's Grid Cheatsheet](https://grid.malven.co/)
-* [Img Shields](https://shields.io)
-* [GitHub Pages](https://pages.github.com)
-* [Font Awesome](https://fontawesome.com)
-* [React Icons](https://react-icons.github.io/react-icons/search)
+Project Link: [https://github.com/mateuszdybich1/ToDoAPP ](https://github.com/mateuszdybich1/ToDoAPP )
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -238,32 +231,15 @@ Use this space to list resources you find helpful and would like to give credit 
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/mateuszdybich1/ToDoAPP.svg?style=for-the-badge
-[contributors-url]: https://github.com/mateuszdybich1/ToDoAPP/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/mateuszdybich1/ToDoAPP.svg?style=for-the-badge
-[forks-url]: https://github.com/mateuszdybich1/ToDoAPP/network/members
-[stars-shield]: https://img.shields.io/github/stars/mateuszdybich1/ToDoAPP.svg?style=for-the-badge
-[stars-url]: https://github.com/mateuszdybich1/ToDoAPP/stargazers
-[issues-shield]: https://img.shields.io/github/issues/mateuszdybich1/ToDoAPP.svg?style=for-the-badge
-[issues-url]: https://github.com/mateuszdybich1/ToDoAPP/issues
-[license-shield]: https://img.shields.io/github/license/mateuszdybich1/ToDoAPP.svg?style=for-the-badge
-[license-url]: https://github.com/mateuszdybich1/ToDoAPP/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
-[product-screenshot]: images/screenshot.png
-[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
-[Next-url]: https://nextjs.org/
-[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
-[React-url]: https://reactjs.org/
-[Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
-[Vue-url]: https://vuejs.org/
-[Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
-[Angular-url]: https://angular.io/
-[Svelte.dev]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00
-[Svelte-url]: https://svelte.dev/
-[Laravel.com]: https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white
-[Laravel-url]: https://laravel.com
-[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
-[Bootstrap-url]: https://getbootstrap.com
-[JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
-[JQuery-url]: https://jquery.com 
+[Volley]: https://img.shields.io/badge/Volley-yellow
+[Volley-url]: https://google.github.io/volley/
+[PHP]: https://img.shields.io/badge/PHP-777BB4?logo=php&logoColor=fff&style=for-the-badge
+[PHP-url]: https://www.php.net/
+[Material]: https://img.shields.io/badge/Material%20Design-757575?logo=materialdesign&logoColor=fff&style=for-the-badge
+[Material-url]: https://m2.material.io/
+[Firebase]: https://img.shields.io/badge/Firebase-red?style=for-the-badge&logo=Firebase&logoColor=white
+[Firebase-url]: https://firebase.google.com/
+[Kotlin]: https://img.shields.io/badge/Kotlin-0095D5?&style=for-the-badge&logo=kotlin&logoColor=white
+[Kotlin-url]: https://kotlinlang.org/
+[IntelliJ]: https://img.shields.io/badge/IntelliJ_IDEA-000000.svg?style=for-the-badge&logo=intellij-idea&logoColor=white
+[IntelliJ-url]: https://www.jetbrains.com/idea/
