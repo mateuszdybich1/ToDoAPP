@@ -11,8 +11,6 @@
 
 
 
-
-
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
@@ -74,33 +72,7 @@ This project is created for small groups where there is a team leader (manager) 
 
 How to use this app:
 * After a few seconds of splash screen, user will be taken to the login view. Next, he has to click on the purple text "Sign up now", and will be redirected to the registration view.
-<style>
-.grid-container {
-  display: grid;
-    
-  grid-template-columns: auto auto;
-   align-content: center;
-    padding-bottom: 20px;
-    alignment: center;
-    grid-gap: 40px;
-    justify-content: center;
-}
-.grid-container2 {
-  display: grid;
-    
-  grid-template-columns: auto;
-    place-items: center;
 
-    padding-bottom: 50px;
-    padding-left: 50px;
-    padding-right: 50px;
-    grid-gap: 40px;
-    
-    
-    
-}
-
-</style>
 <div class="grid-container">
     
   <img src="img/imgSplashScreen.png" height="400" alt="Splash Screen">
@@ -139,12 +111,10 @@ view its details, and hold to perform the operation.
 
 
 "Add task" - when clicked, user is redirected to the view with fields to fill to add new task for the project. Base deadline date is set to the end of next day.
-<div class="grid-container">
-  <img src="img/imgAddTask.png" height="400" alt="Add Task activity">
 
-</div>
 
 <div class="grid-container">
+<img src="img/imgAddTask.png" height="400" alt="Add Task activity">
 <img src="img/imgAddTask_deadlineDate.png" height="400" alt="Deadline Date Fragment">
 <img  src="img/imgAddTask_deadlineHour.png" height="400" alt="Deadline Hour Fragment">
 </div>
